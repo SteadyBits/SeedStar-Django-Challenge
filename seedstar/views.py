@@ -1,24 +1,17 @@
-from django.shortcuts import render_to_response, render, redirect, get_object_or_404
-from django.template.context_processors import csrf
+from django.shortcuts import render, redirect, get_object_or_404
+
+from django.template.context_processors import csrf # to prevent XSS attack on form
+
 from .models import Contact
-
-# Create your views here.
-
-from django.http import HttpResponse
-from django.http import HttpResponseRedirect
-
-from django.template import loader
-from .models import *
 from .forms import ContactForm
 
-
-def landing(request):
-    template = loader.get_template('landing.html')
-    context = {
+#landing page
+def landing(request, template_name='landing.html'):
+    data = {
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, template_name, data)
 
-
+#list method
 def list(request, template_name='list.html'):
     contact = Contact.objects.all()
     data = {}
