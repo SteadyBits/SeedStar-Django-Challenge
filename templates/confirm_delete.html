@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <img src="{% static 'img/menu_img.jpg' %}" width="100%"/>
+    <br/><br/>
+<div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 -align-center">
+
+                <div class="panel-default" >
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-list-alt"></i>Delete Contact</h3>
+                            </div>
+
+                            <div class="panel-body">
+    <form method="post" class="form-horizontal">
+        {% csrf_token %}
+        Are you sure you want to delete "{{ object }}" ?
+        <input type="submit" value="Delete" class="btn btn-primary" />
+    </form>
+                            </div>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
+</body>
+</html>
