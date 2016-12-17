@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from . import views
-
+#I am defining the urls formats here for all views and pages
 urlpatterns = [
     url(r'^$', views.landing, name='landing'),
     url(r'^list', views.list),

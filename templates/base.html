@@ -12,22 +12,19 @@
     <title>SeedStar World</title>
     {% load staticfiles %}
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static  'vendor/bootstrap/css/bootstrap.min.css' %} "/>
+    <link rel="stylesheet" type="text/css" href="{% static  'fonts/bootstrap/css/bootstrap.min.css' %} "/>
       <!-- Plugin CSS -->
     <!-- Custom Fonts -->
-    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-
     <!-- Plugin CSS -->
-    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet"/>
+    <link href="{% static 'fonts/magnific-popup/magnific-popup.css' %}" rel="stylesheet"/>
 
     <!-- Theme CSS -->
     <link href="{% static 'css/creative.min.css' %}" rel="stylesheet"/>
-
-
 
 </head>
 
@@ -62,11 +59,9 @@
         <!-- /.container-fluid -->
     </nav>
 
+    {% block content%}
 
-                    {% block content%}
-
-                    {% endblock %}
-
+    {% endblock %}
 
     <section id="contact">
         <div class="container">
@@ -74,7 +69,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Solution to SeedStar Django challenge by Omeiza Daniel, accomplished on December 17, 2016</p>
+                    <p>Solution to SeedStar Django challenge by Omeiza Daniel, accomplished in December 17, 2016</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -88,15 +83,15 @@
         </div>
     </section>
 <!-- jQuery -->
-    <script src="{% static  'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static  'fonts/jquery/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{% static  'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static  'fonts/bootstrap/js/bootstrap.min.js' %}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="{% static  'vendor/scrollreveal/scrollreveal.min.js'%} "></script>
-    <script src="{% static  'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static  'fonts/scrollreveal/scrollreveal.min.js'%} "></script>
+    <script src="{% static  'fonts/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <!-- Theme JavaScript -->
     <script src="{% static  'js/creative.min.js' %}"></script>
 </body>
